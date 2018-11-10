@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -16,7 +17,25 @@ public class Player : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        ProcessTranslation();
+        ProcessRotation();
+
+    }
+
+    private void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(-30, 90, 0);
+
+        /* Setting Local Rotation
+         * transform.localRotation = Quaternion.Euler(x, y, z);
+         * transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+         */
+    }
+
+    private void ProcessTranslation()
+    {
         float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
@@ -30,6 +49,5 @@ public class Player : MonoBehaviour {
         float clampYPos = Mathf.Clamp(rawNewYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampXPos, clampYPos, transform.localPosition.z);
-
-	}
+    }
 }
