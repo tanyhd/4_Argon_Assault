@@ -23,9 +23,14 @@ public class Player : MonoBehaviour {
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("Player Trigger With " + other);
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         ProcessTranslation();
         ProcessRotation();
