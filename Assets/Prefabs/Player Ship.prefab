@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198544538687099444}
   - component: {fileID: 199805228577863768}
   m_Layer: 0
-  m_Name: Bullets Right
+  m_Name: Gun Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 198531636090439616}
   - component: {fileID: 199243760374018390}
   m_Layer: 0
-  m_Name: Bullets Left
+  m_Name: Gun Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,8 +103,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1295779962765284}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.068383336, y: -1.0035374, z: 5.1118956}
+  m_LocalRotation: {x: -0.07469807, y: -0, z: -0.0000000018626451, w: 0.9972063}
+  m_LocalPosition: {x: 0.1919676, y: -0.73671496, z: 4.632387}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4437021306477924}
@@ -315,9 +315,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlSpeed: 15
-  xRange: 4.5
-  yRange: 2.8
-  positionPitchFactor: -7.5
+  xRange: 4.2
+  yRange: 2.4
+  guns:
+  - {fileID: 1562463931985354}
+  - {fileID: 1020892800352336}
+  positionPitchFactor: -8
   positionYawFactor: 7.5
   controlPitchFactor: -20
   controlRollFactor: -30

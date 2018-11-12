@@ -243,7 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
-  scorePerHit: 100
+  scorePerEnemy: 100
+  hits: 10
 --- !u!1001 &183392855
 Prefab:
   m_ObjectHideFlags: 0
@@ -396,7 +397,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
-  scorePerHit: 100
+  scorePerEnemy: 100
+  hits: 10
 --- !u!1 &228726618
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +585,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
-  scorePerHit: 100
+  scorePerEnemy: 100
+  hits: 10
 --- !u!4 &438895646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1,
@@ -957,14 +960,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.021708349, y: 0.2135747, z: -0.002153428, w: 0.9766832}
-  m_LocalPosition: {x: 270.01938, y: 16.643707, z: 451.09933}
+  m_LocalRotation: {x: 0.09460404, y: 0.21281715, z: -0.018101025, w: 0.97233295}
+  m_LocalPosition: {x: 270.18, y: 17.03, z: 451.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438895646}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 2.483, y: 24.676, z: 0.291}
+  m_LocalEulerAnglesHint: {x: 11.051001, y: 24.720001, z: 0.296}
 --- !u!114 &534669906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1398,7 +1401,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
-  scorePerHit: 100
+  scorePerEnemy: 100
+  hits: 10
 --- !u!1001 &871990469
 Prefab:
   m_ObjectHideFlags: 0
@@ -1459,12 +1463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
-  scorePerHit: 200
---- !u!1 &969345651 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1020892800352336, guid: dfaa95a0fec8ad6478e1a5051356c9b1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1394868032}
+  scorePerEnemy: 100
+  hits: 10
 --- !u!1001 &1050672856
 Prefab:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
-  scorePerHit: 200
+  scorePerEnemy: 100
+  hits: 10
 --- !u!4 &1166058549 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649,
@@ -1632,26 +1633,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 534669905}
     m_Modifications:
-    - target: {fileID: 114151252889366854, guid: dfaa95a0fec8ad6478e1a5051356c9b1,
-        type: 2}
-      propertyPath: guns.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.068383336
+      value: 0.1919676
       objectReference: {fileID: 0}
     - target: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.0035374
+      value: -0.73671496
       objectReference: {fileID: 0}
     - target: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.1118956
+      value: 4.632387
       objectReference: {fileID: 0}
     - target: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.07469807
       objectReference: {fileID: 0}
     - target: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
       propertyPath: m_LocalRotation.y
@@ -1659,34 +1655,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.0000000018626451
       objectReference: {fileID: 0}
     - target: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9972063
       objectReference: {fileID: 0}
     - target: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1562463931985354, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
-      propertyPath: m_Name
-      value: Gun Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 1020892800352336, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
-      propertyPath: m_Name
-      value: Gun Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 114151252889366854, guid: dfaa95a0fec8ad6478e1a5051356c9b1,
-        type: 2}
-      propertyPath: guns.Array.data[0]
-      value: 
-      objectReference: {fileID: 1474141694}
-    - target: {fileID: 114151252889366854, guid: dfaa95a0fec8ad6478e1a5051356c9b1,
-        type: 2}
-      propertyPath: guns.Array.data[1]
-      value: 
-      objectReference: {fileID: 969345651}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfaa95a0fec8ad6478e1a5051356c9b1, type: 2}
   m_IsPrefabAsset: 0
@@ -1708,12 +1686,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
-  scorePerHit: 100
---- !u!1 &1474141694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1562463931985354, guid: dfaa95a0fec8ad6478e1a5051356c9b1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1394868032}
+  scorePerEnemy: 100
+  hits: 10
 --- !u!1 &1499004702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,7 +1824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
-  scorePerHit: 100
+  scorePerEnemy: 100
+  hits: 10
 --- !u!1 &2070649544
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,9 +7,9 @@ public class Enemy : MonoBehaviour {
 
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform parent;
-    [SerializeField] int scorePerHit = 100;
-    bool timesHit = false;
-
+    [SerializeField] int scorePerEnemy = 100;
+    [SerializeField] int hits = 10;
+    
     ScoreBoard scoreBoard;
 
 	// Use this for initialization
@@ -24,20 +24,20 @@ public class Enemy : MonoBehaviour {
         boxCollider.isTrigger = false;
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
-
     private void OnParticleCollision(GameObject other)
     {
-        if (!timesHit)
+        hits--;
+        if (hits <= 0)
         {
-            timesHit = true;
-            scoreBoard.ScoreHit(scorePerHit);
-            GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
-            fx.transform.parent = parent;
-            Destroy(gameObject);
+            KillEnemy();
         }
+    }
+
+    private void KillEnemy()
+    {
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parent;
+        scoreBoard.ScoreHit(scorePerEnemy);
+        Destroy(gameObject);
     }
 }
