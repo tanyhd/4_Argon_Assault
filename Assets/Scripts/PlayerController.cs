@@ -4,36 +4,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour {
-
-    [Tooltip ("In ms^-1")] [SerializeField] float speed = 4f;
-
+public class PlayerController : MonoBehaviour {
+    
+    [Header("General")]
+    [Tooltip ("In ms^-1")] [SerializeField] float controlSpeed = 4f;
     [Tooltip("In m")] [SerializeField] float xRange = 6f;
     [Tooltip("In m")] [SerializeField] float yRange = 6f;
 
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -2f;
-    [SerializeField] float controlPitchFactor = -20f;
-
     [SerializeField] float positionYawFactor = 4f;
+
+    [Header("Control-throw Based")]
+    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -20f;
 
     float xThrow, yThrow;
+    bool isControlEnable = true;
 
     // Use this for initialization
     void Start () {
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        print("Player Trigger With " + other);
-    }
-
     // Update is called once per frame
     void Update ()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnable)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
+    }
+
+    public void OnPlayerDeath() // called by string reference
+    {
+        isControlEnable = false;
     }
 
     private void ProcessRotation()
@@ -61,8 +67,8 @@ public class Player : MonoBehaviour {
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
-        float xOffset = xThrow * speed * Time.deltaTime;
-        float yOffset = yThrow * speed * Time.deltaTime;
+        float xOffset = xThrow * controlSpeed * Time.deltaTime;
+        float yOffset = yThrow * controlSpeed * Time.deltaTime;
 
         float rawNewXPos = transform.localPosition.x + xOffset;
         float rawNewYPos = transform.localPosition.y + yOffset;
