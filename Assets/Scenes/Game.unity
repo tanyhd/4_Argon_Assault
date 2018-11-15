@@ -244,7 +244,43 @@ MonoBehaviour:
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
   scorePerEnemy: 100
-  hits: 10
+  hits: 3
+--- !u!95 &94939720
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94939715}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &94939721
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94939715}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e6b425bb851fa5e4ba664f8640f7fbc2, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114640961860849740, guid: e6b425bb851fa5e4ba664f8640f7fbc2, type: 2}
+    value: {fileID: 94939720}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &183392855
 Prefab:
   m_ObjectHideFlags: 0
@@ -398,7 +434,7 @@ MonoBehaviour:
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
   scorePerEnemy: 100
-  hits: 10
+  hits: 3
 --- !u!1 &228726618
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +622,7 @@ MonoBehaviour:
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
   scorePerEnemy: 100
-  hits: 10
+  hits: 3
 --- !u!4 &438895646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4185933352894358, guid: dfaa95a0fec8ad6478e1a5051356c9b1,
@@ -734,15 +770,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 739.53845
+      value: 818.9
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 64.692856
+      value: 63.5
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 782.0842
+      value: 775.2
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalRotation.x
@@ -778,15 +814,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -88.966
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 62.445004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -147.498
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_Name
@@ -996,15 +1032,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 737.7
+      value: 810.8
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 64.9
+      value: 63.8
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 760.8
+      value: 754.5
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1040,15 +1076,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -88.966
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 62.445004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -147.498
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_Name
@@ -1295,15 +1331,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -88.966
+      value: -0.00000004012827
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 62.445004
+      value: -0.000001551403
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -114.814
+      value: 357.912
       objectReference: {fileID: 0}
     - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 2}
       propertyPath: m_Name
@@ -1402,7 +1438,7 @@ MonoBehaviour:
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
   scorePerEnemy: 100
-  hits: 10
+  hits: 3
 --- !u!1001 &871990469
 Prefab:
   m_ObjectHideFlags: 0
@@ -1464,7 +1500,7 @@ MonoBehaviour:
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
   scorePerEnemy: 100
-  hits: 10
+  hits: 3
 --- !u!1001 &1050672856
 Prefab:
   m_ObjectHideFlags: 0
@@ -1592,7 +1628,7 @@ MonoBehaviour:
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
   scorePerEnemy: 100
-  hits: 10
+  hits: 3
 --- !u!4 &1166058549 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649,
@@ -1687,7 +1723,45 @@ MonoBehaviour:
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
   scorePerEnemy: 100
-  hits: 10
+  hits: 3
+--- !u!95 &1472654639
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472654635}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &1472654640
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472654635}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7fc39f0bba9582141bc6e997d4593761, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 1472654639}
+  - key: {fileID: 114452111776937454, guid: 7fc39f0bba9582141bc6e997d4593761, type: 2}
+    value: {fileID: 1472654639}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1499004702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,7 +1899,51 @@ MonoBehaviour:
   deathFX: {fileID: 1312295461191600, guid: 3bc8924f175794d42a5b7cdb362a94d3, type: 2}
   parent: {fileID: 77302370}
   scorePerEnemy: 100
-  hits: 10
+  hits: 3
+--- !u!95 &1956426815
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956426812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &1956426816
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956426812}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: a3f9828cd14959e4a898b8edaf6cde5a, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 1956426815}
+  - key: {fileID: 0}
+    value: {fileID: 1956426815}
+  - key: {fileID: 0}
+    value: {fileID: 1956426815}
+  - key: {fileID: 0}
+    value: {fileID: 1956426815}
+  - key: {fileID: 114564549218963980, guid: a3f9828cd14959e4a898b8edaf6cde5a, type: 2}
+    value: {fileID: 1956426815}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &2070649544
 GameObject:
   m_ObjectHideFlags: 0
